@@ -1,0 +1,64 @@
+nav.main {
+	width: 250px;
+	background: #3B4854;
+	height: 100%;
+	position: absolute;
+	z-index: 9;
+	transition: all .4s ease-in-out;
+	top: 52px;
+}
+
+nav.main div {
+	width: 100%;
+	overflow: hidden;
+}
+
+nav.main header {
+	position: relative;
+	height: 80px;
+	width: 250px;
+	padding: 20px 0 0 15px;
+	font-size: 16px;
+	color: #fff;
+	background: #303B45;
+	transition: all .4s ease-in-out;
+}
+
+nav.main header img.thumb {
+	position: relative;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+	transition: all .4s ease-in-out;
+	border-radius: 50%;
+}
+
+nav.main header a:before {
+	content: '\f053';
+	font: normal 20px FontAwesome;
+	top: 28px;
+	right: 15px;
+}
+
+nav.main a.open {
+	height: 0;
+	display: block;
+	overflow: hidden;
+	transition: all .4s ease-in-out;
+}
+
+nav.main a.open:before {
+	position: static;
+	content: '\f054';
+	font: normal 20px FontAwesome;
+	padding: 15px 19px;
+	color: #fff;
+}
+
+ul.collapsed li {
+background: #000;
+width: 100%;
+margin-left: auto;
+}

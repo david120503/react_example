@@ -37,5 +37,10 @@ module.exports = {
     port: 8008,
   },
   // plugins 放置所使用的外掛
-  plugins: [HTMLWebpackPluginConfig],
+  plugins: [
+    HTMLWebpackPluginConfig,
+    new webpack.ProvidePlugin({
+            "React": "react",
+        }),
+  ],
 };
