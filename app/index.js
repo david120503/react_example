@@ -3,7 +3,9 @@ import './css/sidebar.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import BsNavBar from './header/bsnavbar.js';
-import BsSideBar from './body/sidebar.js';
+import SideBar from './body/sidebar.js';
+import Container from './body/container.js';
+import Footer from './footer/footer.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +17,15 @@ class App extends React.Component {
       return (
           <div>
             <BsNavBar />
-            <BsSideBar />
+            <SideBar />
+            <Container 
+              Menu = "Dashboard"
+              subMenu = "Users"
+              sub2Menu = "create user"
+              HeaderTitle = "Example Title Header" 
+              SubTitle = "Subtext for header"
+            />
+            <Footer />
           </div>
       );
   }
