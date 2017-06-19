@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "react_example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,9 +23,8 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "react": "^15.5.4",
+    "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
-    "react-burger-menu": "^2.1.1",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.6.1"
   }
 }
