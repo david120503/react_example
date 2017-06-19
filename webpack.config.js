@@ -38,9 +38,6 @@ module.exports = {
   },
   // plugins 放置所使用的外掛
   plugins: [
-    HTMLWebpackPluginConfig,
-    new webpack.ProvidePlugin({
-            "React": "react",
-        }),
+    HTMLWebpackPluginConfig
   ],
 };
