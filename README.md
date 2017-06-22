@@ -3,4 +3,4 @@ this is learn react project
 
 there is Demo
 
-<a href="http://boydavid.tw/react/dist/" >Click Here</a>
+<a href="http://boydavid.tw/react/dist/" target="_blank">Click Here</a>
