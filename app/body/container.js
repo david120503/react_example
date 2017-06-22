@@ -19,9 +19,24 @@ export default class Container extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-		
+			text:"Hello World!",
+			text_class:"",
+			btn_primary:"primary",
+			btn_success:"success",
+			btn_info:"info",
+			btn_warning:"warning",
+			btn_danger:"danger"
 		};
 	}
+
+	click_text = () => {
+		this.setState({text:"you click primary btn!"});
+	};
+
+	click_add_class = () => {
+		this.setState({text_class:"changeTextColor"});
+	};
+
 	render() {
 		return (
 			<div className="container">
@@ -38,7 +53,7 @@ export default class Container extends React.Component {
 				</Breadcrumb>
 					<PageHeader>{this.props.HeaderTitle} <small>{this.props.SubTitle}</small></PageHeader>
 					<Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
-					<Tab eventKey={1} title="Tab 1">
+					<Tab eventKey={1} title="Form">
 						<div className = "text" >
 							<Form horizontal>
 								<FormGroup controlId="formHorizontalEmail">
@@ -73,7 +88,7 @@ export default class Container extends React.Component {
 							</Form>
 						</div>
 					</Tab>
-					<Tab eventKey={2} title="Tab 2">
+					<Tab eventKey={2} title="Image Carousel">
 						<div className = "text" >
 							<Carousel>
 								<Carousel.Item>
@@ -100,8 +115,27 @@ export default class Container extends React.Component {
 							</Carousel>
 						</div>
 					</Tab>
-					<Tab eventKey={3} title="Tab 3" disabled>
-						Tab 3 content
+					<Tab eventKey={3} title="Button">
+						<h3> This is Button onClick Practice</h3>
+					    {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+					    <Button bsStyle={this.state.btn_primary} onClick={this.click_text}>change Text</Button>
+
+					    {/* Indicates a successful or positive action */}
+					    <Button bsStyle={this.state.btn_success} onClick={this.click_add_class}>change Color</Button>
+
+					    {/* Contextual button for informational alert messages */}
+					    <Button bsStyle={this.state.btn_info}>Info</Button>
+
+					    {/* Indicates caution should be taken with this action */}
+					    <Button bsStyle={this.state.btn_warning}>Warning</Button>
+
+					    {/* Indicates a dangerous or potentially negative action */}
+					    <Button bsStyle={this.state.btn_danger}>Danger</Button>
+
+					    {/* Deemphasize a button by making it look like a link while maintaining button behavior */}
+					    <Button bsStyle="link">Link</Button>
+
+					    <div className={this.state.text_class}>{this.state.text}</div>
 					</Tab>
 				 </Tabs>
 

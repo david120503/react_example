@@ -58,7 +58,23 @@ nav.main a.open:before {
 }
 
 ul.collapsed li {
-background: #000;
-width: 100%;
-margin-left: auto;
+	background: #000;
+	width: 100%;
+	margin-left: auto;
 }
+
+@media screen and (min-width: 1201px) { 
+	nav.main {width: 250px}
+} 
+ 
+@media screen and (max-width: 1200px) { 
+	nav.main {width: 180px}  
+} 
+ 
+@media screen and (max-width: 900px) { 
+	nav.main {width: 100px;}  
+} 
+ 
+@media screen and (max-width: 500px) { 
+	nav.main {width: 88px;}  
+} 
